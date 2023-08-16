@@ -1,0 +1,32 @@
+/* body{
+    margin-top: 20px;
+    text-align: center;
+} */
+.input_text_1{
+    /* border-radius: 6px; */
+    /* border: 1px rgb(120, 120, 120) solid;  */
+    margin: 0px auto; 
+    width: max-content;
+}
+/* .input_text_1::-moz-focus-outer{
+    border: 1px red solid;
+} */
+.Login{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+    width: 70px;
+    height: 35px;
+}
+.logout{
+    text-align: right;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+    margin-left: 80%;
+    width: 80px;
+    height: 35px;
+    text-align: center;
+}

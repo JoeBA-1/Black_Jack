@@ -1,0 +1,11 @@
+body{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.input_text_1{
+    /* border-radius: 6px; */
+    /* border: 1px rgb(120, 120, 120) solid;  */
+    margin: 0px auto; 
+    width: max-content;
+}

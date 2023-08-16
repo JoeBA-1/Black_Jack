@@ -100,6 +100,7 @@ function startGame() {
     cardsEl.innerHTML = `Cards: ${firstCard} ${secondCard}`
     sumEl.innerHTML = `Sum: ${sum} `
     playerEl.innerHTML = `${player.name}: $${player.chips}`
+    renderGame()
   }else{
     alert('You already started the game')
   }
@@ -107,7 +108,35 @@ function startGame() {
 }
 
 function newCard() {
-  
+  if(isAlive == true && player.chips >= 50 && sum < 21){
+    player.chips -= 50
+    let card = getRandomCard()
+    cardsEl.innerHTML += ` ${card}`
+    sum += card
+    sumEl.innerHTML = `Sum: ${sum}`
+    playerEl.innerHTML = `${player.name}: $${player.chips}`
+    renderGame()
+  }
+}
+
+function renderGame() {
+  if(sum < 21){
+    messageEl.innerHTML = "Do you want to draw a new Card"
+  }else if (sum == 21){
+    messageEl.innerHTML = "Congrats! You Win!!"
+  }else if(player.chips == 0){
+    messageEl.innerHTML = "You're Out Of Cash!! Try Again !!"
+  }else{
+    messageEl.innerHTML = "You Lose, Try Again!!"
+  }
+
+}
+
+function reset() {
+  // location.reload()
+  if(sum >= 21 || player.chips == 0){
+    location.reload()
+  }
 }
 // document.title = 'Blackjack'
 // let riddleEL = document.getElementById("riddle")
